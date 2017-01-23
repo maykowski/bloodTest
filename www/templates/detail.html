@@ -1,0 +1,68 @@
+<ion-view>
+    <ion-nav-title class="bar-positive">
+        <h2 class="title">{{whichpatient.name}}</h2>
+    </ion-nav-title>
+    <ion-content ion-sticky ion-sticky-class="stable">
+
+                <div class="row">
+                    <div class="left avatar col col-25">
+                        <img ng-src="img/{{whichpatient.sex}}.png" alt="{{ whichpatient.name }} Photo" class="avatar-img">
+                    </div>
+                    <div class="right col">
+                        <h1 class="text-center">{{ whichpatient.name }}</h1>
+                        <h4 class="text-center">
+                            <i class="icon ion-ios-telephone"></i>
+                            <a href="#" onclick="return false;">{{ whichpatient.phone }}</a>
+                        </h4>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col col-20">ID</div>
+                    <div class="col">{{ whichpatient.id }}</div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col col-20 dark">Address</div>
+                    <div class="col">{{ whichpatient.address }}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-20 text-left">Sex</div>
+                    <div class="col">{{ whichpatient.sex }}</div>
+                </div>
+                <div class="row">
+                    <div class="col col-20 text-left">Weight</div>
+                    <div class="col">{{ whichpatient.weight }} kg</div>
+                </div>
+                <div class="row">
+                    <div class="col col-20 text-left">Last visit</div>
+                    <div class="col">{{ whichpatient.last_visit }}</div>
+                </div>
+                </div>
+
+        <div ng-show="visits.length > 0">
+            <ion-list>
+                <ion-item class="item-divider text-center" ng-show="(filtered = (visits | filter:'2016')).length > 0">Visits 2016</ion-item>
+                <ion-item collection-repeat="visit in visits | filter:'2016' | orderBy: '-visit_date' " href="#/tab/visit/{{visit.id}}">
+                       {{visit.visit_date}}
+                        <div class="text-right item-icon-right">
+                            <i class="icon ion-chevron-right icon-accessory"></i>
+                        </div>
+                    </div>
+
+                </ion-item>
+                <ion-item class="item-divider text-center" ng-show="(filtered = (visits | filter:'2015')).length > 0">Visits 2015</ion-item>
+                <ion-item ng-repeat="visit in visits | filter:'2015' | orderBy: '-visit_date' " href="#/tab/visit/{{visit.id}}">
+
+                    {{visit.visit_date}}
+                    <div class="text-right item-icon-right">
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </div>
+
+                </ion-item>
+            </ion-list>
+        </div>
+        <h3 ng-show="visits.length == 0" class="assertive text-center">No visits</h3>
+    </ion-content>
+</ion-view>

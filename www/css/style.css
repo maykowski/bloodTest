@@ -1,1 +1,167 @@
 /* Empty. Add your own CSS if you like */
+
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png');
+}
+
+.star>.item-content {
+  background-color: #EEE8D6 !important;
+}
+
+.splash {
+  background: url(../img/skyline.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.branding {
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.branding-row{
+  padding:0;
+}
+
+.email-btn{
+  margin-top:20px;
+  text-decoration: underline;
+}
+
+.logo{
+  height:auto;width:100%;
+  padding:0;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  /*font-family: "Sri-TSCRegular", serif*/
+}
+
+.tagline2 {
+  font-size: 0.8rem;
+}
+
+.branding p {
+  margin-top: 30px;
+  line-height: 2.0rem;
+  font-size: 1.0rem;
+}
+
+.positive-bg{
+  background-color: #b92b27 !important;
+  border-color:  #b92b27;
+
+}
+
+/*.item-divider {*/
+  /*background-color: #EEE8D6;*/
+/*}*/
+
+.bar-positive, .tabs-positive>.tabs {
+  background-color: #b92b27 !important;
+  border-color:  #b92b27;
+  background-image: linear-gradient(0deg, #b92b27, #b92b27 0%, transparent 0%)
+}
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+  color: #b92b27;
+}
+
+.item-thumbnail-left img {
+  border-radius: 10px;
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.dayhighlight {
+  background-color: #9EC6DE;
+  border-top: 20px solid #417D9A;
+}
+
+.dayhighlight h2 {
+  color: #417D9A;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+
+/*Custom*/
+
+h1 {
+    font-size:2.0em;
+}
+
+label.search{
+  border:1px solid white!important;
+
+}
+
+input.search-input{
+  color:#fff;
+}
+
+.ion-search{
+  font-size:20px;
+}
+.search-input::-webkit-input-placeholder{
+  color:#fff;
+}
+
+.search-input:focus::-webkit-input-placeholder{
+  color: #c6c8c8;
+}
+
+
+.search-cancel.ng-hide-add {
+  transition: all 0.2s linear;
+}
+
+.search-cancel.ng-hide-add.ng-hide-add-active {
+  transform:translateX(100px);
+}
+
+.search-cancel.ng-hide-remove {
+  transform:translateX(0);
+  transition: all 0.2s linear;
+}
+
+.search-cancel.ng-hide-remove{
+  transform:translateX(100px);
+}
+
+.search-cancel.ng-hide-remove-active {
+  transform:translateX(0);
+}
+
+ion-item.item-divider {
+  background-color: #edefef;
+  color:#000;
+  font-weight: bold;
+  /*border:solid #b92b27 2px;*/
+}
+
+div.item-divider{
+  background-color:#fff;
+}
+
+.avatar-img{
+    width:100%;
+    max-height:200px;
+    max-width:200px;
+}
+
+.ion-ios-telephone{
+  font-size:1.5em;
+}
+

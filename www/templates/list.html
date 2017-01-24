@@ -1,30 +1,26 @@
-<ion-view view-title="Patients">
 
-    <ion-nav-buttons side="right">
-        <button
-                class="button button-icon ion-navicon"
-                ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
-        </button>
-    </ion-nav-buttons>
+<ion-view hide-nav-bar="true">
 
-    <ion-header-bar class="bar bar-subheader item-input-inset bar-positive" align-title="center" ng-init="showCancel=false">
-        <label class="item-input-wrapper bar-positive search">
-            <i class="icon ion-search placeholder-icon-stable"></i>
+    <ion-header-bar class="item-input-inset bar-positive" align-title="center" ng-init="showCancel=false">
+        <label class="item-input-wrapper bar-positive search ion-search">
+            <!--<i class="icon ion-search placeholder-icon-stable"></i>-->
             <input type="search" ng-model="query" class="search-input" placeholder="Search" ng-click="showCancel=true;" ng-blur="showCancel=false;">
         </label>
         <button ng-show="showCancel" ng-click="showCancel=false;query='';" class="button button-clear search-cancel">Cancel</button>
     </ion-header-bar>
 
-    <ion-content class="has-subheader">
+
+
+    <ion-content has-bouncing="true" overflow-scroll="false">
         <ion-refresher on-refresh="doRefresh()"></ion-refresher>
-        <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
-            <ion-item ng-class="{'star': item.star}" ng-repeat="item in patients | filter: query" class="item-thumbnail-left item-icon-right
+        <ion-list show-delete="data.showDelete" show-reorder="data.showReorder" >
+            <ion-item ng-class="{'star': item.star}" ng-repeat="item in patients | filter: query" class="item-avatar-left item-icon-right
       item-text-wrap" ui-sref="tabs.detail({aId:item.id})">
-                <img ng-src="img/{{item.sex}}.png" alt="{{ item.name }} Photo">
+                <img ng-src="img/{{item.sex}}.png" alt="{{ item.name }} Photo" class="avatar-list">
                 <i class="icon ion-chevron-right icon-accessory"></i>
-                <h3>{{item.name}}</h3>
-                <h4>Age: {{item.age}}</h4>
-                <h4>Last visit: {{item.last_visit}}</h4>
+                <p class="list-item-name">{{item.name}}</p>
+                <p class="list-item-details">Age: {{item.age}}</p>
+                <p class="list-item-details">Last visit: {{item.last_visit}}</p>
 
                 <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
                 <ion-option-button class="button-dark" ng-click="toggleStar(item)">

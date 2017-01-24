@@ -79,9 +79,17 @@ body {
 }
 
 .item h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1rem;
+  /*font-weight: bold;*/
   color: #000;
+  font-family:Arial;
+}
+
+.item h4 {
+  font-size: 0.8rem;
+  /*font-weight: bold;*/
+  color: #000;
+  font-family:Arial;
 }
 
 .dayhighlight {
@@ -161,7 +169,28 @@ div.item-divider{
     max-width:200px;
 }
 
+img.avatar-list{
+  width: auto !important;
+  height:60%!important;
+}
+
+.item-thumbnail-left{
+  height:70px!important;
+}
+
 .ion-ios-telephone{
   font-size:1.5em;
+}
+
+p.list-item-name{
+  font-size:1.2em;
+  font-family:Arial;
+  color:#000;
+}
+
+p.list-item-detail{
+  font-size:1em;
+  font-family:Arial;
+  color:#000;
 }
 

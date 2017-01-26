@@ -5,9 +5,9 @@ body {
   cursor: url('http://ionicframework.com/img/finger.png');
 }
 
-.star>.item-content {
-  background-color: #EEE8D6 !important;
-}
+/*.flag>.item-content {*/
+  /*background-color: #fff5b4 !important;*/
+/*}*/
 
 .splash {
   background: url(../img/skyline.jpg) no-repeat center center fixed;
@@ -178,8 +178,35 @@ img.avatar-list{
   height:70px!important;
 }
 
+
+.patient-item.ng-enter,
+.patient-item.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.patient-item.ng-enter,
+.patient-item.ng-leave.ng-leave-active {
+  transform:translateX(-800px);
+
+
+}
+
+.patient-item.ng-leave,
+.patient-item.ng-enter.ng-enter-active {
+  transform:translateX(0);
+  opacity:1;
+
+}
+
+
 .ion-ios-telephone{
   font-size:1.5em;
+}
+
+
+.phone-link{
+  text-decoration:none;
 }
 
 p.list-item-name{

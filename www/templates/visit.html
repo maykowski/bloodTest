@@ -5,8 +5,12 @@
     <ion-content ion-sticky ion-sticky-class="stable"  has-bouncing="true" overflow-scroll="false">
 
 
-        <div class="right list-header">
-            <h4 class="text-center padding-vertical">Facility: {{ whichvisit.location }}</h4>
+        <div class="right">
+          <div class="row padding">
+            <div class="col col-20 dark"><p>Facility:</p></div>
+            <div class="col">{{ whichvisit.location }}</div>
+          </div>
+          <!--<h4 class="text-center padding-vertical"><span class="dark">:</span> </h4>-->
         </div>
         <div class="item-divider"></div>
 

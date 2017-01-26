@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ion-sticky', 'patient-state'])
+angular.module('starter', ['ionic', 'ion-sticky', 'patient-state', 'ngAnimate'])
 
     .factory('PatientService', PatientService)
     .factory('VisitService', VisitService)
@@ -46,8 +46,8 @@ angular.module('starter', ['ionic', 'ion-sticky', 'patient-state'])
                 }.bind(this));
             }
 
-            $scope.toggleStar = function (item) {
-                item.star = !item.star;
+            $scope.toggleFlag = function (item) {
+                item.flag = !item.flag;
             }
 
             $scope.moveItem = function (item, fromIndex, toIndex) {

@@ -14,17 +14,17 @@
     <ion-content has-bouncing="true" overflow-scroll="false">
         <ion-refresher on-refresh="doRefresh()"></ion-refresher>
         <ion-list show-delete="data.showDelete" show-reorder="data.showReorder" >
-            <ion-item ng-class="{'star': item.star}" ng-repeat="item in patients | filter: query" class="item-avatar-left item-icon-right
-      item-text-wrap" ui-sref="tabs.detail({aId:item.id})">
+            <ion-item ng-class="{'flag': item.flag}" ng-repeat="item in patients | filter: query" class="item-avatar-left item-icon-right
+      item-text-wrap patient-item" ui-sref="tabs.detail({aId:item.id})">
                 <img ng-src="img/{{item.sex}}.png" alt="{{ item.name }} Photo" class="avatar-list">
                 <i class="icon ion-chevron-right icon-accessory"></i>
                 <p class="list-item-name">{{item.name}}</p>
                 <p class="list-item-details">Age: {{item.age}}</p>
                 <p class="list-item-details">Last visit: {{item.last_visit}}</p>
 
-                <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
-                <ion-option-button class="button-dark" ng-click="toggleStar(item)">
-                    <i class="icon ion-star"></i>
+                <button class="button button-clear icon ion-flag button-assertive" ng-click="toggleFlag(item)" ng-show="item.flag"></button>
+                <ion-option-button class="button-energized" ng-click="toggleFlag(item)">
+                    <i class="icon ion-flag"></i>
                 </ion-option-button>
                 <ion-option-button class="button-assertive" ng-click="onItemDelete(item)">
                     <i class="icon ion-trash-a"></i>

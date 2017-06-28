@@ -27,7 +27,7 @@
           </div>
             <ion-item ng-class="{'flag': item.flag}" ng-repeat="item in patients | filter: query" class="item-avatar-left item-icon-right
       item-text-wrap patient-item" ng-click="beforeLeave()" ui-sref="tabs.detail({aId:item.id})">
-                <img ng-src="img/{{item.sex}}.png" alt="{{ item.name }} Photo" class="avatar-list">
+                <img ng-src="img/{{item.img}}" alt="{{ item.name }} Photo" class="avatar-list">
                 <i class="icon ion-chevron-right icon-accessory"></i>
                 <p class="list-item-name">{{item.name}}</p>
                 <p class="list-item-details">Age: {{item.age}}</p>

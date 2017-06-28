@@ -108,7 +108,8 @@
       "phone": "(44) 343-333-341",
       "weight":77,
       "last_visit": "23-05-2016",
-      "age":34
+      "age":34,
+      "img":"john_smith.jpg"
     },{
       "id": "946386401",
       "name": "Alicia Stallone",
@@ -117,7 +118,8 @@
       "phone": "(44) 532-832-322",
       "weight":89,
       "last_visit": "12-07-2014",
-      "age":35
+      "age":35,
+      "img":"alicia_stallone.jpg"
     },{
       "id": "754932309",
       "name": "Sylvester Kidman",
@@ -126,7 +128,8 @@
       "phone": "(44) 385-237-881",
       "weight":99,
       "last_visit": "07-03-2016",
-      "age":34
+      "age":54,
+      "img":"sylvester_kidman.jpg"
     },{
       "id": "236748390",
       "name": "Nicole Willis",
@@ -135,7 +138,8 @@
       "phone": "(44) 234-537-362",
       "weight":153,
       "last_visit": "20-11-2016",
-      "age":50
+      "age":50,
+      "img":"nicole_willis.jpg"
     },{
       "id": "230976538",
       "name": "Albert Norris",
@@ -144,7 +148,8 @@
       "phone": "(44) 340-098-675",
       "weight":54,
       "last_visit": "29-02-2015",
-      "age":78
+      "age":78,
+      "img":"albert_norris.jpg"
     },{
       "id": "347634094",
       "name": "Arnold Costner",
@@ -153,7 +158,8 @@
       "phone": "(44) 234-095-001",
       "weight":91,
       "last_visit": "16-07-2013",
-      "age":13
+      "age":13,
+      "img":"arnold_costner.jpg"
     },{
       "id": "347799154",
       "name": "Kevin Schwarzenegger",
@@ -162,7 +168,8 @@
       "phone": "(44) 234-564-098",
       "weight":87,
       "last_visit": "18-10-2016",
-      "age":64
+      "age":64,
+      "img":"kevin_schwarzenegger.jpg"
     },{
       "id": "237896539",
       "name": "Anna Knightley",
@@ -171,7 +178,8 @@
       "phone": "(44) 234-372-231",
       "weight":56,
       "last_visit": "15-01-2017",
-      "age":23
+      "age":23,
+      "img":"anna_knightley.jpg"
     },{
       "id": "986627281",
       "name": "Matthew Frankenstein",
@@ -180,7 +188,8 @@
       "phone": "(44) 234-094-563",
       "weight":123,
       "last_visit": "23-01-2017",
-      "age":53
+      "age":53,
+      "img":"matthew_frankenstein.jpg"
     }
   ]
 }

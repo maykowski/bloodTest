@@ -4,12 +4,7 @@ angular.module('patient-state',[])
                 .state('tabs', {
                     url: '/tab',
                     abstract: true,
-                    templateUrl: 'templates/tabs.html',
-                    resolve: {
-                        patients: function (PatientService) {
-                            return PatientService.getPatients();
-                        }
-                    }
+                    templateUrl: 'templates/tabs.html'
                 })
 
                 .state('tabs.info', {

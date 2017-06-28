@@ -70,9 +70,9 @@ body {
   background-image: linear-gradient(0deg, #b92b27, #b92b27 0%, transparent 0%)
 }
 
-.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
-  color: #b92b27;
-}
+/*.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {*/
+  /*color: #b92b27;*/
+/*}*/
 
 .item-thumbnail-left img {
   border-radius: 10px;
@@ -110,26 +110,42 @@ h1 {
     font-size:2.0em;
 }
 
+.search-item{
+  background-color: #e9e9e9;
+
+}
+
 label.search{
-  border:1px solid white!important;
+  border:1px solid #5b5b5b !important;
+  background-color: #fff;
 
 }
 
 input.search-input{
-  color:#fff;
+  color:#000;
+}
+
+.search-box{
+  border:1px solid #5b5b5b !important;
+
 }
 
 .ion-search{
   font-size:20px;
 }
 .search-input::-webkit-input-placeholder{
-  color:#fff;
+  color:#6a6a6a;
 }
 
 .search-input:focus::-webkit-input-placeholder{
-  color: #c6c8c8;
+  color: #c2c2c2;
 }
 
+.search-cancel{
+  line-height: 0.8em;
+  height: 20px;
+  min-height: 24px;
+}
 
 .search-cancel.ng-hide-add {
   transition: all 0.2s linear;
@@ -219,5 +235,9 @@ p.list-item-detail{
   font-size:1em;
   font-family:Arial;
   color:#000;
+}
+
+.blood{
+  color:#b92b27;
 }
 

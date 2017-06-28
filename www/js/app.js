@@ -27,10 +27,18 @@ angular.module('starter', ['ionic', 'ion-sticky', 'patient-state', 'ngAnimate'])
     })
 
 
-    .controller('ListController', ['$scope', '$http', '$state', 'patients', 'PatientService',
-        function ($scope, $http, $state, patients, PatientService) {
-            $scope.patients = patients.data.patients;
-            console.log("Test");
+    .controller('ListController', ['$scope', '$http', '$state', 'PatientService',  '$ionicScrollDelegate', '$ionicListDelegate',
+        function ($scope, $http, $state, PatientService,  $ionicScrollDelegate, $ionicListDelegate) {
+          console.log($ionicScrollDelegate);
+          PatientService.getPatients().then(function (response) {
+            $scope.patients = response.data.patients;
+            $ionicScrollDelegate.scrollTo(0,58, false);
+          }), function (error) {
+            alert("Error retrieving json data")
+          };
+
+
+
             $scope.whichpatient = $state.params.aId;
             $scope.data = {showDelete: false, showReorder: false};
 
@@ -48,12 +56,20 @@ angular.module('starter', ['ionic', 'ion-sticky', 'patient-state', 'ngAnimate'])
 
             $scope.toggleFlag = function (item) {
                 item.flag = !item.flag;
+               $ionicListDelegate.closeOptionButtons(true);
             }
 
             $scope.moveItem = function (item, fromIndex, toIndex) {
                 $scope.patients.splice(fromIndex, 1);
                 $scope.patients.splice(toIndex, 0, item);
             };
+
+            $scope.beforeLeave = function(){
+              console.log("on blur")
+              $ionicListDelegate.closeOptionButtons(true);
+
+            }
+            $ionicScrollDelegate.scrollTo(0,100, true);
         }])
     .controller('PatientController', ['$scope', '$http', '$state', '$filter', 'PatientService', 'VisitService',
         function ($scope, $http, $state, $filter, PatientService, VisitService) {
